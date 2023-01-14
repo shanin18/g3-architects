@@ -1,0 +1,8 @@
+Bonus marks requirements
+
+1.fully responsive specially for mobile.
+2.features image before then text.
+3.experience section text before then images and year button position absolute.
+4.add animation on facts section.
+5.create a meaningful section.
+6.raw meaningful html, css, comments.
