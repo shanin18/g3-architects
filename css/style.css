@@ -1,65 +1,111 @@
-/* google fonts */
+/* >>>>-----------> google fonts <------------<<<<*/
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: 'Work Sans', sans-serif;
 }
 
-/*------------
- common class 
- -------------*/
+:root{
+    --black:#131313;
+    --grey:#727272;
+    --slategray:#424242;
+    --orange:#FF900E;
+    --dark-orange:#fa8602;
+    --white:#FFFFFF;
+    --light-green:#73e0d5;
+    --grey-green:#7FD0C8;
+    --light-biscuit:rgba(255, 144, 14, 0.1);
+}
+
+/*>>>>-----------> common class <------------<<<<*/
 
 .container{
     width: 75%;
     margin: 0 auto;
 }
 
-section{
+#features,
+#experience,
+#experience,
+#facts,
+#sponsors{
     margin-bottom: 130px;
 }
-
 .section-title{
     font-weight: 700;
     font-size: 45px;
-    color: #131313;
+    color: var(--black);
 }
 
 
 .text-primary{
     font-size: 16px;
-    color: #727272;
+    color: var(--grey);
     margin: 30px 0;
     line-height: 26px;
 }
 
 .text-secondary{
     font-weight: 500;
-    color: #727272;
+    color: var(--grey);
 }
 
 .text-tertiary{
-    color: #FF900E;
+    color: var(--orange);
 }
 
 .btn-primary{
     font-weight: 600;
     font-size: 20px;
-    color: #FFFFFF;
+    color: var(--white);
     padding: 20px 25px;
-    background: #FF900E;
+    background: var(--orange);
     border: none;
     border-radius: 8px;
+    cursor: pointer;
 }
 
-/* header styles */
+.btn-primary:hover{
+    background: var(--dark-orange);
+}
+
+.btn-secondary{
+    padding: 15px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--light-green);
+    cursor: pointer;
+}
+.btn-secondary:hover{
+    background-color:var(--grey-green);
+}
+
+.btn-tertiary{
+    position: absolute;
+    padding: 45px 42px;
+    font-weight: 700;
+    font-size: 65px;
+    color: var(--white);
+    background: var(--orange);
+    border-radius: 8px;
+    border: none;
+    bottom: -1%;
+    left: -11%;
+}
+
+/* >>>>-----------> header styles <-----------<<<< */
 #header{
-    background: rgba(255, 144, 14, 0.1);
+    background: var(--light-biscuit);
     padding: 45px 0;
 }
 
@@ -70,10 +116,14 @@ section{
     padding: 5px 0;
 }
 
+.nav-logo{
+    flex-shrink: 0;
+}
+
 .nav-logo h2{
     font-weight: 700;
     font-size: 45px;
-    color: #131313;
+    color: var(--black);
 }
 
 .menu{
@@ -89,36 +139,44 @@ section{
     text-decoration: none;
     font-weight: 500;
     font-size: 18px;
-    color: #424242;
+    color: var(--slategray);
     padding: 10px 15px;
 }
 
-/* banner styles */
+/* >>>>-----------> banner styles <-----------<<<< */
 .banner{
     text-align: center;
 }
 
 .banner-content{
-    width: 60%;
+    width: 65%;
     padding-top: 50px;
     margin: 50px auto;
 }
 .banner-title{
     font-weight: 700;
     font-size: 64px;
-    color: #131313;
+    color: var(--black);
 }
 
-/* features section styles */
+.banner-image img{
+    width: 100%;
+}
+
+/* >>>>-----------> features section styles <-----------<<<<*/
 #features {
     padding: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 50px;
     margin-top: 40px;
 }
 
-.image-container,
+.image-container{
+    width: 55%;
+}
+
 .feature-content{
     width: 40%;
 }
@@ -128,5 +186,414 @@ section{
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
+.image-container img{
+    width: 100%;
+}
 
+/* >>>>-----------> experience section styles <-----------<<<< */
+#experience{
+    display: flex;
+    justify-content: space-between;
+}
 
+.experience-info{
+    width: 40%;
+    padding-top:40px;
+}
+
+.experience-title{
+    border-left: 5px solid var(--orange);
+    padding-left: 20px;
+}
+
+.service{
+    padding: 30px;
+    background: var(--white);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.service-title{
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--black);
+}
+
+.service-desc{
+    margin: 10px 0 0;
+}
+
+.text-experience{
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--white);
+}
+
+.experience-image{
+    width: 50%;
+    position: relative;
+}
+
+.experience-image img{
+    width: 100%;
+}
+
+/* >>>>-----------> facts section styles <-----------<<<< */
+.facts-content{
+     width: 40%;
+}
+
+.card-container{
+    display:flex;
+    justify-content: space-around;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+.card{
+    width: 242px;
+    max-width: 100%;
+    padding: 45px 0px 60px;
+    border: 1px solid var(--orange);
+    border-radius: 8px;
+    text-align: center;
+    transition: .2s;
+}
+
+.card img{
+    transition: .6s;
+}
+
+.card:hover{
+    border: 1px solid var(--white);
+    box-shadow: 2px 2px 10px lightgray;
+}
+
+.card:hover.card-1{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.card:hover.card-2{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.card:hover.card-3{
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+
+.card:hover.card-4{
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+}
+
+.card:hover .card-info{
+    color: var(--white);
+}
+
+.card:hover img{
+    transform: rotateY(360deg);
+}
+
+.card-number{
+    font-weight: 600;
+    font-size: 45px;
+    color: var(--slategray);
+    margin: 10px 0 5px;
+}
+
+.card-info{
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--grey);
+}
+
+/* >>>>-----------> sponsor section styles <-----------<<<<*/
+.sponsor-content{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.logo-container img{
+    filter: grayscale(100%);
+    transition: .2s;
+}
+
+.logo-container img:hover{
+    filter: grayscale(0);
+}
+/* >>>>-----------> contact section styles <-----------<<<< */
+#contact-us{
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 3px 5px 8px lightgrey;
+}
+.contact-form{
+    display: flex;
+    margin-bottom: 130px;
+}
+
+.form-title{
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.input-container,
+.details{
+    padding: 40px;
+    width: 50%;
+}
+
+.input-container{
+    background-color: #80D0C7;
+    background-image: linear-gradient(160deg, #80D0C7 0%, #0093E9 100%);
+
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    display: block;
+    width: 100%;
+    background:transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff59;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 16px;
+    color: var(--white);
+    font-family: 'Work Sans', sans-serif;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.774);
+}
+
+.details-title{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px; 
+}
+.address,
+.email,
+.phone,
+.website{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.icons{
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
+}
+
+/* >>>>-----------> footer styles <-----------<<<< */
+#footer{
+    background: var(--light-biscuit);
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 216px;
+    border-radius: 8px;
+}
+
+#footer  p{
+    font-size: 20px;
+    color: var(--slategray);
+    line-height: 23px;
+}
+    
+
+/*>>>>-----------> media queries <-----------<<<< */
+
+/* >>>>-----------> for small devices <-----------<<<< */
+@media screen and (max-width: 576px) {
+    .btn-primary {
+        font-size: 16px;
+        padding: 20px 25px;
+    }
+
+    .btn-tertiary{
+        position: relative;
+        font-size: 35px;
+        left: 0;
+        bottom: 70px;
+    }
+
+    .nav,
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-logo h2,
+    .banner-title,
+    .section-title {
+        font-size: 35px;
+    }
+
+    .menu li{
+        margin-top: 25px;
+    }
+
+    #features,
+    #experience {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .feature{
+        text-align: left;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    .feature-content,
+    .experience-info,
+    .experience-image,
+    .facts-content,
+    .sponsor-content,
+    .banner-content,
+    .input-container,
+    .details {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-experience {
+        font-size: 16px;
+    }
+
+    .card-container,
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #contact-us {
+        width: 90%;
+    }
+
+    .contact-form,
+    .address, 
+    .email, 
+    .phone, 
+    .website {
+        flex-direction: column;
+    }
+
+    #footer p {
+        font-size: 18px;
+    }
+    
+}
+
+/*>>>>-----------> for medium devices <-----------<<<< */
+@media screen and (min-width:577px) and (max-width: 768px) {
+    .btn-tertiary{
+        font-size: 45px;
+        left: 25%;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .banner-content,
+    .image-container,
+    .feature-content,
+    .experience-info,
+    .experience-image,
+    .sponsor-content,
+    .input-container,
+    .details{
+        width: 100%;
+    }
+    #experience,
+    #features,
+    .contact-form {
+        flex-direction: column;
+    }
+    
+    .facts-content{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* >>>>-----------> for large device <-----------<<<< */
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+    .btn-tertiary{
+        font-size: 40px;
+        bottom: -15%;
+        left: 10%;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .banner-content,
+    .image-container,
+    .feature-content,
+    .sponsor-content {
+        width: 80%;
+    }
+
+    #features{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #experience{
+        align-items: center;
+    }
+
+    .experience-info,
+    .experience-image{
+        width: 48%;
+    }
+
+    .card-container{
+        justify-content: center;
+    }
+
+    .contact-form{
+        flex-direction: column;
+    }
+    .input-container,
+    .details{
+        width: 100%;
+    }
+    
+    .facts-content{
+        width: 100%;
+        text-align: center;
+    }
+
+}
